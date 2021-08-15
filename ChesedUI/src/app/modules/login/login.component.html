@@ -1,0 +1,47 @@
+<div class="login-container">
+    <div class="login-page">
+        <div class="login-form">
+            <div class="login-header">
+                <h4>Log In</h4>
+            </div>
+            <div class="login-body mt-5">
+                <form #loginForm="ngForm">
+                    <div class="inputBox mt-3">
+                        <select name="organization" [(ngModel)]="organization" tabindex="3" id="txtOrganization">
+                            <option value="Datavanced">Datavanced</option>
+                            <option value="Bina">Bina</option>
+                            <option value="Sharsheret">Sharsheret</option>
+                            <option value="FocusOnLife">Focus on Life</option>
+                            <!-- <option *ngFor="let org of Organizations" [value]="org.id">{{org.name}}</option> -->
+                        </select>
+                        <span>Select Organization</span>
+                    </div>
+                    <div class="inputBox mt-3">
+                        <input type="text" name="userName" [(ngModel)]="username"  tabindex="1" id="txtUserName" required>
+                        <span>Username</span>
+                    </div>
+                    <div class="inputBox mt-3"> 
+                        <input type="password" name="password" [(ngModel)]="password" tooltip id="txtPassword" tabindex="2" required>
+                        <span>Password</span>
+                    </div>
+                    <div class="d-grid gap-2 mt-5">
+                        <button type="submit" [disabled]="!loginForm.valid" id="btnLogin" 
+                        (click)="onSubmit(loginForm)" tabindex="4" class="credential-button primary-solid-button">Log In</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="details-page">
+        <div class="details-page-body">
+            <div class="top">
+                <h4>Chesed BIKUR CHOLIM</h4>
+                <span class="text-italy">Chesed is a cloud based emergency management and preparedness system helping you digitize and improve contingency plans and critical events</span>
+            </div>
+            <div class="bottom mt-5">
+                <img src="./assets/img/login-img.png" alt="login-img">
+            </div>
+        </div>
+    </div>
+  </div>
+  

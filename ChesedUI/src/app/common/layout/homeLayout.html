@@ -1,0 +1,807 @@
+<!-- header -->
+<input type="checkbox" id="sidebar-toggle">
+<header>
+	<div class="left-side">
+		<div class="sidebar-header">
+			<label for="sidebar-toggle" class="menu-ico">
+				<!-- <i class='bx bx-menu-alt-left'></i> -->
+				<svg xmlns="http://www.w3.org/2000/svg" width="22.951" height="16.505" viewBox="0 0 22.951 16.505">
+					<g id="Icon_feather-menu" data-name="Icon feather-menu" transform="translate(-3.5 -8)">
+					  <path id="Path_5660" data-name="Path 5660" d="M4.5,18H19.235" transform="translate(0 -1.748)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+					  <path id="Path_5661" data-name="Path 5661" d="M4.5,9H25.451" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+					  <path id="Path_5662" data-name="Path 5662" d="M4.5,27H22.742" transform="translate(0 -3.495)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+					</g>
+				</svg>
+			</label>
+			<span class="brand">
+				<h3>Chesed BIKUR CHOLIM</h3>
+			</span>
+		</div>
+	</div>
+	<div class="right-side">
+		<span class="call">
+			<button class="btn btn-primary call-button" data-bs-toggle="modal" data-bs-target="#newCallModal">
+				<!-- <i class="material-icons-outlined">phone</i> -->
+				<svg xmlns="http://www.w3.org/2000/svg" width="11.729" height="11.729" viewBox="0 0 11.729 11.729">
+					<path id="Icon_material-call" data-name="Icon material-call" d="M6.859,9.576a9.871,9.871,0,0,0,4.294,4.294l1.434-1.434a.648.648,0,0,1,.665-.156,7.433,7.433,0,0,0,2.326.371.654.654,0,0,1,.652.652v2.274a.654.654,0,0,1-.652.652A11.076,11.076,0,0,1,4.5,5.152.654.654,0,0,1,5.152,4.5H7.432a.654.654,0,0,1,.652.652,7.4,7.4,0,0,0,.371,2.326.654.654,0,0,1-.163.665L6.859,9.576Z" transform="translate(-4.5 -4.5)" fill="#fff"/>
+				</svg>
+				<span>New Call</span>
+			</button>
+		</span>
+		<div class="user-popup">
+			<a class="right-dot-menu" data-bs-toggle="dropdown" aria-expanded="false">
+				<i class="material-icons-outlined">more_vert</i>
+			</a>
+			<ul class="dropdown-menu dropdown-menu-end user-dropdown">
+				<li>
+					<a href="">
+						<i class="material-icons-outlined">person</i>
+						Profile
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<i class="material-icons-outlined">settings</i>
+						Settings
+					</a>
+				</li>
+				<li><hr class="dropdown-divider"></li>
+				<li>
+					<a href="" (click)="logout()" >
+						<i class="material-icons-outlined">logout</i>
+						Logout
+					</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</header>
+
+<!-- sidebar -->
+<div class="sidebar">
+	<!-- sidebar menu -->
+	<div class="sidebar-menu">
+		<ul>
+			<li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}">
+				<a [routerLink]='["/"]' class="sidebar-menu-item">
+					<!-- <i class="material-icons-outlined">dashboard</i> -->
+					<svg id="dashboard" xmlns="http://www.w3.org/2000/svg" width="13.484" height="13.484" viewBox="0 0 13.484 13.484">
+						<g id="Group_927" data-name="Group 927">
+						  <g id="Group_926" data-name="Group 926">
+							<path id="Path_5692" data-name="Path 5692" d="M5.714,352H.506a.506.506,0,0,0-.506.506v3.034a.506.506,0,0,0,.506.506H5.714a.506.506,0,0,0,.506-.506v-3.034A.506.506,0,0,0,5.714,352Zm-.506,3.034h-4.2v-2.023h4.2Z" transform="translate(0 -342.561)" fill="#888"/>
+							<path id="Path_5693" data-name="Path 5693" d="M5.714,0H.506A.506.506,0,0,0,0,.506V7.888a.506.506,0,0,0,.506.506H5.714a.506.506,0,0,0,.506-.506V.506A.506.506,0,0,0,5.714,0ZM5.208,7.383h-4.2V1.011h4.2Z" fill="#888"/>
+							<path id="Path_5694" data-name="Path 5694" d="M271.714,0h-5.208A.506.506,0,0,0,266,.506V3.54a.506.506,0,0,0,.506.506h5.208a.506.506,0,0,0,.506-.506V.506A.506.506,0,0,0,271.714,0Zm-.506,3.034h-4.2V1.011h4.2Z" transform="translate(-258.735)" fill="#888"/>
+							<path id="Path_5695" data-name="Path 5695" d="M271.714,180h-5.208a.506.506,0,0,0-.506.506v7.383a.506.506,0,0,0,.506.506h5.208a.506.506,0,0,0,.506-.506v-7.383A.506.506,0,0,0,271.714,180Zm-.506,7.383h-4.2v-6.371h4.2Z" transform="translate(-258.735 -174.91)" fill="#888"/>
+						  </g>
+						</g>
+					</svg>
+					<span>Dashboard</span>
+				</a>
+			</li>
+			<li [routerLinkActive]="['active']">
+				<a [routerLink]='["/call"]' class="sidebar-menu-item active">
+					<!-- <i class="material-icons-outlined">phone_in_talk</i> -->
+					<svg xmlns="http://www.w3.org/2000/svg" width="13.484" height="13.484" viewBox="0 0 13.484 13.484">
+						<g id="phone-call" transform="translate(0 -0.001)">
+						  <g id="Group_929" data-name="Group 929" transform="translate(0 0.001)">
+							<g id="Group_928" data-name="Group 928">
+							  <path id="Path_5696" data-name="Path 5696" d="M248.526,22.144h.026a4.781,4.781,0,0,1,4.791,4.815.527.527,0,0,0,.524.529h0a.527.527,0,0,0,.527-.524,5.835,5.835,0,0,0-5.844-5.873h-.029a.527.527,0,0,0,0,1.053Z" transform="translate(-241.468 -20.535)" fill="#888"/>
+							  <path id="Path_5697" data-name="Path 5697" d="M13.483,10.866A2,2,0,0,0,12.872,9.5a4.9,4.9,0,0,0-1.94-1.289A2.171,2.171,0,0,0,8.7,8.839l0,0-.713.708A10.605,10.605,0,0,1,5.742,7.812l-.069-.069A10.672,10.672,0,0,1,3.936,5.5l.707-.712,0,0a2.171,2.171,0,0,0,.633-2.229A4.9,4.9,0,0,0,3.99.614a2,2,0,0,0-2.782-.1L1.193.527,1.172.547A4.274,4.274,0,0,0,0,3.677,10,10,0,0,0,3.184,10.3l0,0A12.854,12.854,0,0,0,4.447,11.4a.527.527,0,1,0,.641-.836A11.778,11.778,0,0,1,3.929,9.557l0,0a8.943,8.943,0,0,1-2.87-5.88A3.254,3.254,0,0,1,1.908,1.3l0,0a.948.948,0,0,1,1.32.048C4.6,2.759,4.5,3.427,3.894,4.045l-.976.984a.527.527,0,0,0-.107.585A10.643,10.643,0,0,0,4.928,8.488L5,8.557a10.643,10.643,0,0,0,2.874,2.118.527.527,0,0,0,.585-.107l.984-.976c.618-.6,1.286-.7,2.7.662a.948.948,0,0,1,.048,1.32l0,0a3.244,3.244,0,0,1-2.347.854H9.814a6.83,6.83,0,0,1-2.6-.615.527.527,0,1,0-.417.967,7.771,7.771,0,0,0,3.011.7h.03a4.264,4.264,0,0,0,3.1-1.172l.019-.021.014-.015A2,2,0,0,0,13.483,10.866Z" transform="translate(0 -0.001)" fill="#888"/>
+							  <path id="Path_5698" data-name="Path 5698" d="M294.218,112.742a2.9,2.9,0,0,0-1.368-.787.527.527,0,1,0-.281,1.015,1.842,1.842,0,0,1,.9.517,1.883,1.883,0,0,1,.512.887l.008.026a.527.527,0,1,0,1.01-.3l-.007-.024A2.9,2.9,0,0,0,294.218,112.742Z" transform="translate(-284.487 -108.988)" fill="#888"/>
+							</g>
+						  </g>
+						</g>
+					</svg>
+					<span>Call</span>
+				</a>
+			</li>
+			<li [routerLinkActive]="['active']">
+				<a [routerLink]='["/members"]' class="sidebar-menu-item">
+					<!-- <i class="material-icons-outlined">people_alt</i> -->
+					<svg xmlns="http://www.w3.org/2000/svg" width="13.484" height="12.046" viewBox="0 0 13.484 12.046">
+						<g id="users" transform="translate(-0.001 -25.494)">
+						  <g id="Group_930" data-name="Group 930" transform="translate(0.001 25.494)">
+							<path id="Path_5699" data-name="Path 5699" d="M10.933,31.363A3.365,3.365,0,0,0,6.745,26.11a3.366,3.366,0,0,0-4.192,5.253A4.783,4.783,0,0,0,0,35.613v1.445a.482.482,0,0,0,.482.482H13a.482.482,0,0,0,.482-.482V35.613A4.783,4.783,0,0,0,10.933,31.363Zm-2.263-4.9a2.4,2.4,0,0,1,.99,4.6l-.112.048a2.361,2.361,0,0,1-.366.114l-.073.013a2.409,2.409,0,0,1-.424.043c-.064,0-.129,0-.193-.011a.364.364,0,0,1-.072,0,2.433,2.433,0,0,1-.787-.232c-.009,0-.02,0-.029-.008-.048-.023-.1-.043-.139-.069l.01-.015A3.378,3.378,0,0,0,7.99,30L8,29.959a3.4,3.4,0,0,0,.128-.5c0-.025.008-.048.012-.075a3.074,3.074,0,0,0,0-1.034c0-.025-.007-.048-.012-.075a3.4,3.4,0,0,0-.128-.5l-.015-.04a3.379,3.379,0,0,0-.516-.94l-.01-.015A2.393,2.393,0,0,1,8.669,26.463ZM2.409,28.871a2.4,2.4,0,0,1,4.064-1.739c.028.027.055.054.082.082a2.476,2.476,0,0,1,.228.277c.021.03.04.062.06.092a2.369,2.369,0,0,1,.177.325c.012.027.021.055.032.083a2.354,2.354,0,0,1,.119.385c0,.014,0,.029.007.044a2.267,2.267,0,0,1,0,.906c0,.015,0,.029-.007.044a2.349,2.349,0,0,1-.119.385c-.011.027-.02.055-.032.083a2.377,2.377,0,0,1-.177.325c-.02.031-.039.063-.06.092a2.47,2.47,0,0,1-.228.277c-.027.028-.054.055-.082.082a2.4,2.4,0,0,1-.665.449c-.039.018-.079.034-.118.048a2.422,2.422,0,0,1-.357.111c-.03.007-.062.011-.092.016a2.389,2.389,0,0,1-.4.04H4.79a2.386,2.386,0,0,1-.4-.04c-.031-.005-.062-.009-.092-.016a2.421,2.421,0,0,1-.357-.111l-.118-.048A2.408,2.408,0,0,1,2.409,28.871Zm6.261,7.705H.964v-.963a3.829,3.829,0,0,1,2.561-3.629,3.361,3.361,0,0,0,2.583,0,3.871,3.871,0,0,1,.469.208c.1.052.193.11.289.17.063.039.126.077.186.12.093.066.181.138.267.211.055.048.11.1.162.144.079.075.154.155.226.236.052.059.1.118.149.18.063.081.123.164.179.249s.091.147.133.222.092.166.133.252.076.181.111.273.063.159.088.241c.034.112.057.227.081.343.014.068.033.135.044.2a3.983,3.983,0,0,1,.044.576v.963Zm3.853,0H9.632v-.963c0-.151-.009-.3-.022-.448,0-.043-.011-.086-.015-.13-.013-.106-.028-.212-.048-.316q-.013-.067-.027-.134-.035-.161-.08-.319c-.01-.035-.019-.07-.03-.1a4.772,4.772,0,0,0-.58-1.217l-.019-.027q-.124-.184-.265-.357l0,0a4.371,4.371,0,0,0-.311-.345h.02a3.409,3.409,0,0,0,.41.029h.026a3.406,3.406,0,0,0,.38-.025c.039,0,.079-.012.118-.018q.154-.024.3-.061l.086-.022a3.28,3.28,0,0,0,.385-.131,3.829,3.829,0,0,1,2.563,3.63v.963Z" transform="translate(-0.001 -25.494)" fill="#888"/>
+						  </g>
+						</g>
+					</svg>
+					<span>Members</span>
+				</a>
+			</li>
+			<li [routerLinkActive]="['active']">
+				<a [routerLink]='["/patients"]' class="sidebar-menu-item">
+					<!-- <i class="material-icons-outlined">hotel</i> -->
+					<svg xmlns="http://www.w3.org/2000/svg" width="13.484" height="19.103" viewBox="0 0 13.484 19.103">
+						<g id="accident" transform="translate(-75)">
+						  <path id="Path_5700" data-name="Path 5700" d="M84.981,6.18h-.32a3.35,3.35,0,0,0,.453-1.686V3.371a3.371,3.371,0,0,0-6.742,0V4.495a3.35,3.35,0,0,0,.453,1.686H78.5a3.522,3.522,0,0,0-1.567.37A3.485,3.485,0,0,0,75,9.684v6.61a1.687,1.687,0,0,0,1.686,1.686h.562V19.1h8.99V15.732a2.25,2.25,0,0,0,2.247-2.247v-3.8A3.5,3.5,0,0,0,84.981,6.18Zm.133,1.128v7.3H82.946l.974-7.3C85.019,7.305,84.991,7.3,85.113,7.308ZM79.495,3.371a2.247,2.247,0,0,1,4.495,0V4.495a2.247,2.247,0,1,1-4.495,0Zm5.618,14.608H78.371V9.551H77.247v7.3h-.562a.562.562,0,0,1-.562-.562V9.684A2.377,2.377,0,0,1,78.5,7.3h1.377a3.364,3.364,0,0,0,2.85.414l-.619,4.643H81.18a1.686,1.686,0,0,0,0,3.371h3.933Zm-3.3-3.371H81.18a.562.562,0,0,1,0-1.124h.782Zm5.549-1.124a1.125,1.125,0,0,1-1.124,1.124V7.663a2.365,2.365,0,0,1,1.124,2.021Z" fill="#888"/>
+						</g>
+					</svg>
+					<span>Patients</span>
+				</a>
+			</li>
+			<li [routerLinkActive]="['active']">
+				<a [routerLink]='["/hospitals"]' class="sidebar-menu-item">
+					<!-- <i class="material-icons-outlined">medication</i> -->
+					<svg xmlns="http://www.w3.org/2000/svg" width="15.278" height="13.944" viewBox="0 0 15.278 13.944">
+						<g id="building" transform="translate(-14.716 -2.403)">
+						  <path id="Path_5703" data-name="Path 5703" d="M29.519,15.01H28.266V2.467A.471.471,0,0,0,27.791,2H16.919a.471.471,0,0,0-.475.467V15.01H15.191a.467.467,0,1,0,0,.934H29.519a.467.467,0,1,0,0-.934Zm-8.783,0V11.826h3.238V15.01Zm4.187,0V11.358a.471.471,0,0,0-.475-.467H20.261a.471.471,0,0,0-.475.467V15.01H17.394V2.934h9.923V15.01Z" transform="translate(0 0.403)" fill="#888"/>
+						  <path id="Path_5704" data-name="Path 5704" d="M149.283,182.366v1.242h-1.242a.386.386,0,0,0-.386.386v1.541a.386.386,0,0,0,.386.386h1.242v1.242a.386.386,0,0,0,.386.386h1.541a.386.386,0,0,0,.386-.386v-1.242h1.242a.386.386,0,0,0,.386-.386v-1.541a.386.386,0,0,0-.386-.386H151.6v-1.242a.386.386,0,0,0-.386-.386h-1.541A.386.386,0,0,0,149.283,182.366Zm.772,1.628v-1.242h.769v1.242a.386.386,0,0,0,.386.386h1.242v.769H151.21a.386.386,0,0,0-.386.386v1.242h-.769v-1.242a.386.386,0,0,0-.386-.386h-1.242v-.769h1.242A.386.386,0,0,0,150.055,183.994Z" transform="translate(-128.084 -177.319)" fill="#888"/>
+						</g>
+					</svg>
+					<span>Hospitals</span>
+				</a>
+			</li>
+			<li [routerLinkActive]="['active']">
+				<a [routerLink]='["/organizations"]' class="sidebar-menu-item">
+					<!-- <i class="material-icons-outlined">business_center</i> -->
+					<svg xmlns="http://www.w3.org/2000/svg" width="13.484" height="11.898" viewBox="0 0 13.484 11.898">
+						<g id="briefcase" transform="translate(0 -30.125)">
+						  <path id="Path_5705" data-name="Path 5705" d="M13.089,32.505H9.517V31.72a1.6,1.6,0,0,0-1.6-1.6H5.562a1.6,1.6,0,0,0-1.6,1.6v.785H.4a.4.4,0,0,0-.4.4v7.177a1.948,1.948,0,0,0,1.946,1.946h9.593a1.948,1.948,0,0,0,1.946-1.946V32.9A.4.4,0,0,0,13.089,32.505ZM7.639,37.661a.9.9,0,1,1-1.793,0v-.9H7.639Zm.4-1.686H5.451a.4.4,0,0,0-.4.4v.718c-2.3-.5-4.019-1.989-4.241-3.791H12.67c-.222,1.8-1.944,3.293-4.241,3.792v-.718A.4.4,0,0,0,8.034,35.974ZM4.757,31.72a.806.806,0,0,1,.805-.805h2.36a.806.806,0,0,1,.805.805v.785H4.757V31.72Zm7.937,8.357a1.157,1.157,0,0,1-1.156,1.156H1.946A1.157,1.157,0,0,1,.79,40.077V35.333a5.545,5.545,0,0,0,1.227,1.25A7.443,7.443,0,0,0,5.073,37.9a1.686,1.686,0,0,0,3.339,0,7.443,7.443,0,0,0,3.056-1.315,5.546,5.546,0,0,0,1.227-1.25Z" fill="#888"/>
+						</g>
+					</svg>
+					<span>Organizations</span>
+				</a>
+			</li>
+			<li [routerLinkActive]="['active']">
+				<a [routerLink]='["/message-log"]' class="sidebar-menu-item">
+					<!-- <i class="material-icons-outlined">chat</i> -->
+					<svg xmlns="http://www.w3.org/2000/svg" width="13.484" height="11.249" viewBox="0 0 13.484 11.249">
+						<path id="chat" d="M13.484,67.067V61.15A1.653,1.653,0,0,0,11.833,59.5H1.651A1.653,1.653,0,0,0,0,61.15v5.917a1.653,1.653,0,0,0,1.651,1.651H3.133l.032,1.491a.551.551,0,0,0,.882.428l2.545-1.919h5.242A1.653,1.653,0,0,0,13.484,67.067Zm-7.077.55a.55.55,0,0,0-.331.111L4.243,69.11l-.02-.954a.55.55,0,0,0-.55-.539H1.651a.551.551,0,0,1-.55-.55V61.15a.551.551,0,0,1,.55-.55H11.833a.551.551,0,0,1,.55.55v5.917a.551.551,0,0,1-.55.55H6.407Zm3.775-4.506a.55.55,0,0,1-.55.55H3.853a.55.55,0,1,1,0-1.1H9.632A.55.55,0,0,1,10.182,63.111Zm-1,2.408a.55.55,0,0,1-.55.55H4.85a.55.55,0,0,1,0-1.1H8.634A.55.55,0,0,1,9.184,65.519Z" transform="translate(0 -59.499)" fill="#888"/>
+					</svg>
+					<span>Message Log</span>
+				</a>
+			</li>
+		</ul>
+	</div>
+
+	<!-- sidebar footer -->
+	<div class="sidebar-footer">
+		<div class="sidebar-footer-items">
+			<ul>
+				<li>
+					<a href="#" class="sidebar-menu-item" data-bs-toggle="modal" data-bs-target="#sendMessageModal">
+						<!-- <i class="material-icons-outlined">sms</i> -->
+						<svg xmlns="http://www.w3.org/2000/svg" width="15.401" height="14.439" viewBox="0 0 15.401 14.439">
+							<g id="chat" transform="translate(0 -16)">
+							  <g id="Group_1349" data-name="Group 1349" transform="translate(0 16)">
+								<g id="Group_1348" data-name="Group 1348">
+								  <path id="Path_5782" data-name="Path 5782" d="M7.671,16C3.387,16,0,19.067,0,22.768a6.305,6.305,0,0,0,1.76,4.315,2.744,2.744,0,0,1-.725,2.585.452.452,0,0,0,.319.77A4.978,4.978,0,0,0,4.8,29.047a8.515,8.515,0,0,0,2.871.489c4.3,0,7.731-3.076,7.731-6.768S11.964,16,7.671,16Zm0,12.64A7.592,7.592,0,0,1,4.85,28.1a.451.451,0,0,0-.5.115,4.073,4.073,0,0,1-2.025,1.2A3.649,3.649,0,0,0,2.6,26.732a.451.451,0,0,0-.11-.191A5.429,5.429,0,0,1,.9,22.768C.9,19.534,3.939,16.9,7.671,16.9c3.765,0,6.834,2.637,6.834,5.872S11.436,28.64,7.671,28.64Z" transform="translate(0 -16)" fill="#1e6572"/>
+								</g>
+							  </g>
+							  <g id="Group_1351" data-name="Group 1351" transform="translate(2.707 21.415)">
+								<g id="Group_1350" data-name="Group 1350">
+								  <path id="Path_5783" data-name="Path 5783" d="M91.354,196a1.354,1.354,0,1,0,1.354,1.354A1.355,1.355,0,0,0,91.354,196Zm0,1.8a.451.451,0,1,1,.451-.451A.452.452,0,0,1,91.354,197.8Z" transform="translate(-90 -196)" fill="#1e6572"/>
+								</g>
+							  </g>
+							  <g id="Group_1353" data-name="Group 1353" transform="translate(6.317 21.415)">
+								<g id="Group_1352" data-name="Group 1352">
+								  <path id="Path_5784" data-name="Path 5784" d="M211.354,196a1.354,1.354,0,1,0,1.354,1.354A1.355,1.355,0,0,0,211.354,196Zm0,1.8a.451.451,0,1,1,.451-.451A.452.452,0,0,1,211.354,197.8Z" transform="translate(-210 -196)" fill="#1e6572"/>
+								</g>
+							  </g>
+							  <g id="Group_1355" data-name="Group 1355" transform="translate(9.987 21.415)">
+								<g id="Group_1354" data-name="Group 1354">
+								  <path id="Path_5785" data-name="Path 5785" d="M333.354,196a1.354,1.354,0,1,0,1.354,1.354A1.355,1.355,0,0,0,333.354,196Zm0,1.8a.451.451,0,1,1,.451-.451A.452.452,0,0,1,333.354,197.8Z" transform="translate(-332 -196)" fill="#1e6572"/>
+								</g>
+							  </g>
+							</g>
+						</svg>
+					</a>
+				</li>
+				<li>
+					<div class="btn-group dropend">
+						<a href="#" class="sidebar-menu-item position-relative" data-bs-toggle="dropdown" aria-expanded="false">
+							<span class="position-absolute top-0 start-100 translate-middle p-1 bg-danger border border-light rounded-circle">
+								<p class="position-absolute top-50 start-50 translate-middle">2</p>
+							</span>
+							<!-- <i class="material-icons-outlined">phone</i> -->
+							<svg xmlns="http://www.w3.org/2000/svg" width="12.907" height="12.907" viewBox="0 0 12.907 12.907">
+								<path id="Icon_material-call" data-name="Icon material-call" d="M7.1,10.086a10.862,10.862,0,0,0,4.725,4.725L13.4,13.234a.713.713,0,0,1,.731-.172,8.179,8.179,0,0,0,2.56.409.719.719,0,0,1,.717.717v2.5a.719.719,0,0,1-.717.717A12.189,12.189,0,0,1,4.5,5.217.719.719,0,0,1,5.217,4.5h2.51a.719.719,0,0,1,.717.717,8.146,8.146,0,0,0,.409,2.56.72.72,0,0,1-.179.731Z" transform="translate(-4.5 -4.5)" fill="#1e6572"/>
+							</svg>
+						</a>
+						<div class="dropdown-menu dropright">
+							<div class="dropright-header">
+								<span class="bold">2 active lines</span>
+							</div>
+							<div class="dropright-body">
+								<div class="dropright-body-items">
+									<div class="top">
+										<div class="top-left">
+											<span class="text-light">Line 1</span>
+										</div>
+										<div class="top-right">
+											<button type="button" class="dropright-card-button warning-light-button">
+												<i class="material-icons-outlined">pause</i>
+												Hold
+											</button>
+											<button type="button" class="dropright-card-button primary-light-button">
+												<i class="material-icons-outlined">sync_alt</i>
+												Transfer
+											</button>
+											<button type="button" class="dropright-card-button new-contact-btn">
+												+ New Contact
+											</button>
+										</div>
+									</div>
+									<div class="mid">
+										<div class="mid-left">
+											<span class="bold">Margret Treutel</span>
+										</div>
+										<div class="mid-right">
+											<i class='bx bx-phone-call'></i>
+											<span class="bold">543-366-5820</span>
+										</div>
+									</div>
+									<div class="bottom">
+										<span class="text-light">645 Kingston Ave, Brooklyn, NY 11203, USA. New York</span>
+									</div>
+								</div>
+								<div class="hl"></div>
+								<div class="dropright-body-items">
+									<div class="top">
+										<div class="top-left">
+											<span class="text-light">Line 2</span>
+										</div>
+										<div class="top-right">
+											<button type="button" class="dropright-card-button warning-light-button">
+												<i class="material-icons-outlined">pause</i>
+												Hold
+											</button>
+											<button type="button" class="dropright-card-button primary-light-button">
+												<i class="material-icons-outlined">sync_alt</i>
+												Transfer
+											</button>
+										</div>
+									</div>
+									<div class="mid">
+										<div class="mid-left">
+											<span class="bold">Trinity Crona</span>
+										</div>
+										<div class="mid-right">
+											<i class='bx bx-phone-call'></i>
+											<span class="bold">651-004-7663</span>
+										</div>
+									</div>
+									<div class="bottom">
+										<span class="text-light">645 Kingston Ave, Brooklyn, NY 11203, USA. New York</span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</li>
+				<!-- <li>
+					<a href="#" class="sidebar-menu-item">
+						<i class="material-icons-outlined">email</i>
+					</a>
+				</li> -->
+				<li>
+					<div class="btn-group dropend">
+						<a href="#" class="sidebar-menu-item position-relative" data-bs-toggle="dropdown" aria-expanded="false">
+							<span class="position-absolute top-0 start-100 translate-middle p-1 bg-danger border border-light rounded-circle">
+								<p class="position-absolute top-50 start-50 translate-middle">3</p>
+							</span>
+							<!-- <i class="material-icons-outlined">email</i> -->
+							<svg id="mailing" xmlns="http://www.w3.org/2000/svg" width="13.484" height="15.42" viewBox="0 0 13.484 15.42">
+								<path id="Path_5709" data-name="Path 5709" d="M11.823,177.875H1.661A1.663,1.663,0,0,0,0,179.536v6.74a1.663,1.663,0,0,0,1.661,1.661H11.823a1.663,1.663,0,0,0,1.661-1.661v-6.74A1.663,1.663,0,0,0,11.823,177.875Zm-.164.9-4.917,3.57-4.917-3.57Zm.922,7.5a.759.759,0,0,1-.758.758H1.661a.759.759,0,0,1-.758-.758v-6.74a.753.753,0,0,1,.051-.273l5.522,4.009a.452.452,0,0,0,.531,0l5.522-4.009a.753.753,0,0,1,.051.273Zm0,0" transform="translate(0 -172.518)" fill="#1e6572"/>
+								<path id="Path_5710" data-name="Path 5710" d="M340.27,33.277H337.85a.452.452,0,0,0,0,.9h1.329l-1.648,1.648a.452.452,0,0,0,.639.639l1.648-1.648v1.329a.452.452,0,0,0,.9,0V33.729A.452.452,0,0,0,340.27,33.277Zm0,0" transform="translate(-327.237 -32.275)" fill="#1e6572"/>
+								<path id="Path_5711" data-name="Path 5711" d="M.452,36.6A.452.452,0,0,0,.9,36.148V34.82l1.648,1.648a.452.452,0,1,0,.639-.639L1.542,34.181H2.871a.452.452,0,0,0,0-.9H.452A.452.452,0,0,0,0,33.729v2.419A.452.452,0,0,0,.452,36.6Zm0,0" transform="translate(0 -32.275)" fill="#1e6572"/>
+								<path id="Path_5712" data-name="Path 5712" d="M152.834,2.482l.94-.94V3.873a.452.452,0,1,0,.9,0V1.542l.94.94a.452.452,0,0,0,.639-.639L154.544.132a.452.452,0,0,0-.639,0l-1.711,1.711a.452.452,0,0,0,.639.639Zm0,0" transform="translate(-147.483 0)" fill="#1e6572"/>
+							</svg>							  
+						</a>
+						<div class="dropdown-menu dropright">
+							<div class="dropright-header">
+								<span class="bold">Resend 3 messages</span>
+							</div>
+							<div class="dropright-body">
+								<div class="top-msg">
+									<div class="top-msg-items">
+										<div class="top-left-msg">
+											<span class="semi-bold text-light">Please do all the test by Friday</span>
+										</div>
+										<div class="top-right-msg">
+											<a href="#" class="link">Select</a>
+										</div>
+									</div>
+									<div class="hl"></div>
+									<div class="top-msg-items">
+										<div class="top-left-msg">
+											<span class="semi-bold text-light">Come again for checkup</span>
+										</div>
+										<div class="top-right-msg">
+											<a href="#" class="link disabled">Selected</a>
+										</div>
+									</div>
+									<div class="hl"></div>
+									<div class="top-msg-items">
+										<div class="top-left-msg">
+											<span class="semi-bold text-light">Please, Take hot water 3 times in a day</span>
+										</div>
+										<div class="top-right-msg">
+											<a href="#" class="link">Select</a>
+										</div>
+									</div>
+								</div>
+								<div class="mid-msg">
+									<textarea class="mid-msg-item" name="message" id="messageTxt" cols="5" rows="2" placeholder="Message"></textarea>
+								</div>
+								<div class="bottom-msg">
+									<div class="bottom-left">
+										<div class="announcement-check form-check">
+											<input class="announcement-check-input form-check-input" type="checkbox" value="" id="checkAnnouncement">
+											<label class="announcement-check-label form-check-label semi-bold" for="checkAnnouncement">Announcement</label>
+										</div>
+									</div>
+									<div class="bottom-right">
+										<button type="button" class="theme-button">Send</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+<main>
+	<router-outlet></router-outlet>
+</main>
+
+<!-- footer -->
+<footer>
+	<div class="footer-options">
+		<div class="footer-heading">
+			<span>Total 24 calls:</span>
+		</div>
+		<div class="footer-elements">
+			<div class="footer-items">
+				<span class="pending-text text">Pending</span>
+				<span class="badge rounded-pill pending">2</span>
+			</div>
+			<div class="footer-items">
+				<span class="open-text text">Open</span>
+				<span class="badge rounded-pill open">3</span>
+			</div>
+			<div class="footer-items">
+				<span class="wrap-text text">Wrap</span>
+				<span class="badge rounded-pill wrap">0</span>
+			</div>
+			<div class="footer-items">
+				<span class="covered_n_c-text text">Covered not called</span>
+				<span class="badge rounded-pill covered_n_c">8</span>
+			</div>
+			<div class="footer-items">
+				<span class="covered-text text">Covered & called</span>
+				<span class="badge rounded-pill covered">2</span>
+			</div>
+			<div class="footer-items">
+				<span class="time_change-text text">Wrap time change</span>
+				<span class="badge rounded-pill time_change">3</span>
+			</div>
+			<div class="footer-items">
+				<span class="c_dispatch-text text">Cancelled by dispatch</span>
+				<span class="badge rounded-pill c_dispatch">2</span>
+			</div>
+			<div class="footer-items">
+				<span class="c_patient-text text">Cancelled by patient</span>
+				<span class="badge rounded-pill c_patient">3</span>
+			</div>
+		</div>
+	</div>
+</footer>
+
+<!-- new call modal -->
+<div class="modal fade" id="newCallModal" tabindex="-1" aria-labelledby="newCallModalLabel" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered modal-lg">
+		<div class="modal-content">
+			<div class="modal-body p-0">
+				<div class="modal-body-items">
+					<div class="modal-body-left">
+						<div class="map">
+							<iframe 
+								width="324" 
+								height="640"
+								id="gmap_canvas" 
+								src="https://maps.google.com/maps?q=2880%20Broadway,%20New%20York&t=&z=17&ie=UTF8&iwloc=&output=embed" 
+								frameborder="0" 
+								scrolling="no" 
+								marginheight="0" 
+								marginwidth="0">
+							</iframe>
+						</div>
+					</div>
+					<div class="modal-body-right">
+						<div class="chesed-modal-header">
+							<span class="header-text bold">New call</span>
+							<span class="close text-light" data-bs-dismiss="modal" aria-label="Close">
+								<i class="material-icons-outlined">close</i>
+							</span>
+						</div>
+						<div class="chesed-modal-body">
+							<form action="">
+								<div class="chesed-form-body">
+									<div class="form-left">
+										<div class="form-floating mb-2">
+											<input type="text" class="form-control" id="floatingInput" placeholder="Patient Name">
+											<label for="floatingInput">Patient Name</label>
+										</div>
+										<div class="form-floating mb-2">
+											<input type="text" class="form-control" id="floatingInput" placeholder="Pick Up">
+											<label for="floatingInput">Pick Up</label>
+										</div>
+										<div class="form-floating mb-2">
+											<input type="text" class="form-control" id="floatingInput" placeholder="Loaction">
+											<label for="floatingInput">Loaction</label>
+										</div>
+										<div class="form-floating mb-2">
+											<input type="text" class="form-control" id="floatingInput" placeholder="Loaction Address">
+											<label for="floatingInput">Loaction Address</label>
+										</div>
+										<div class="timing">
+											<div class="timing-items">
+												<div class="form-floating">
+													<input type="date" class="form-control" id="floatingInput" placeholder="Date of Trip">
+													<label for="floatingInput">Date of Trip</label>
+												</div>
+											</div>
+											<div class="timing-items">
+												<div class="form-floating">
+													<input type="time" class="form-control" id="floatingInput" placeholder="Time of Trip">
+													<label for="floatingInput">Time of Trip</label>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="vl"></div>
+									<div class="form-right">
+										<div class="select-mfc mb-2">
+											<span class="mfc-header semi-bold">To M/F/C</span>
+											<div class="mfc-body">
+												<div class="select-mfc-items">
+													<div class="form-floating">
+														<select class="form-select" id="floatingSelect" aria-label="Floating label select example">
+														  <option selected>0</option>
+														  <option value="1">1</option>
+														  <option value="2">2</option>
+														  <option value="3">3</option>
+														  <option value="4">4</option>
+														  <option value="5">5</option>
+														</select>
+														<label for="floatingSelect">M</label>
+													</div>
+												</div>
+												<div class="select-mfc-items">
+													<div class="form-floating">
+														<select class="form-select" id="floatingSelect" aria-label="Floating label select example">
+														  <option selected>0</option>
+														  <option value="1">1</option>
+														  <option value="2">2</option>
+														  <option value="3">3</option>
+														  <option value="4">4</option>
+														  <option value="5">5</option>
+														</select>
+														<label for="floatingSelect">F</label>
+													</div>
+												</div>
+												<div class="select-mfc-items">
+													<div class="form-floating">
+														<select class="form-select" id="floatingSelect" aria-label="Floating label select example">
+														  <option selected>0</option>
+														  <option value="1">1</option>
+														  <option value="2">2</option>
+														  <option value="3">3</option>
+														  <option value="4">4</option>
+														  <option value="5">5</option>
+														</select>
+														<label for="floatingSelect">C</label>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="select-mfc mb-2">
+											<span class="mfc-header semi-bold">From M/F/C</span>
+											<div class="mfc-body">
+												<div class="select-mfc-items">
+													<div class="form-floating">
+														<select class="form-select" id="floatingSelect" aria-label="Floating label select example">
+														  <option selected>0</option>
+														  <option value="1">1</option>
+														  <option value="2">2</option>
+														  <option value="3">3</option>
+														  <option value="4">4</option>
+														  <option value="5">5</option>
+														</select>
+														<label for="floatingSelect">M</label>
+													</div>
+												</div>
+												<div class="select-mfc-items">
+													<div class="form-floating">
+														<select class="form-select" id="floatingSelect" aria-label="Floating label select example">
+														  <option selected>0</option>
+														  <option value="1">1</option>
+														  <option value="2">2</option>
+														  <option value="3">3</option>
+														  <option value="4">4</option>
+														  <option value="5">5</option>
+														</select>
+														<label for="floatingSelect">F</label>
+													</div>
+												</div>
+												<div class="select-mfc-items">
+													<div class="form-floating">
+														<select class="form-select" id="floatingSelect" aria-label="Floating label select example">
+														  <option selected>0</option>
+														  <option value="1">1</option>
+														  <option value="2">2</option>
+														  <option value="3">3</option>
+														  <option value="4">4</option>
+														  <option value="5">5</option>
+														</select>
+														<label for="floatingSelect">C</label>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="callback-body mb-2">
+											<div class="callback-items">
+												<div class="form-floating">
+													<input type="text" class="form-control" id="floatingInput" value="347-675-9864" placeholder="Callback 1">
+													<label for="floatingInput">Callback 1</label>
+												</div>
+											</div>
+											<div class="callback-items">
+												<div class="form-floating">
+													<select class="form-select" id="floatingSelect" aria-label="Floating label select example">
+													  <option selected>Select</option>
+													  <option value="1">1</option>
+													  <option value="2">2</option>
+													  <option value="3">3</option>
+													  <option value="4">4</option>
+													  <option value="5">5</option>
+													</select>
+													<label for="floatingSelect">Callback 2</label>
+												</div>
+											</div>
+										</div>
+										<div class="callback-return-body mb-2">
+											<div class="callback-items">
+												<div class="form-floating">
+													<input type="text" class="form-control" id="floatingInput" placeholder="Callback Return">
+													<label for="floatingInput">Callback Return</label>
+												</div>
+											</div>
+										</div>
+										<div class="form-type">
+											<div class="form-type-left">
+												<div class="form-check">
+													<input class="form-check-input" type="checkbox" value="" id="checkPriority">
+													<label class="form-check-label semi-bold" for="checkPriority">Priority</label>
+												</div>
+												<div class="form-check">
+													<input class="form-check-input" type="checkbox" value="" id="checkPackage">
+													<label class="form-check-label semi-bold" for="checkPackage">Package</label>
+												</div>
+											</div>
+											<div class="form-type-right">
+												<div class="form-check">
+													<input class="form-check-input" type="checkbox" value="" id="checkAnyWay">
+													<label class="form-check-label semi-bold" for="checkAnyWay">Any way</label>
+												</div>
+												<div class="form-check">
+													<input class="form-check-input" type="checkbox" value="" id="checkCarSeat">
+													<label class="form-check-label semi-bold" for="checkCarSeat">Car seat</label>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="new-call-notes">
+									<span class="new-call-notes-header semi-bold">Notes:</span>
+									<div class="new-call-notes-body">
+										<div class="new-call-notes-item">
+											<div class="form-floating">
+												<input type="text" class="form-control" id="floatingInput" placeholder="Pre Trip">
+												<label for="floatingInput">Pre Trip</label>
+											</div>
+										</div>
+										<div class="new-call-notes-item">
+											<div class="form-floating">
+												<input type="text" class="form-control" id="floatingInput" placeholder="Pre Trip">
+												<label for="floatingInput">Pre Trip</label>
+											</div>
+										</div>
+										<div class="new-call-notes-item">
+											<div class="form-floating">
+												<input type="text" class="form-control" id="floatingInput" placeholder="Private">
+												<label for="floatingInput">Private</label>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="new-call-tab">
+									<nav>
+										<div class="nav nav-tabs" id="nav-tab" role="tablist">
+											  <button class="nav-link active semi-bold" 
+												  id="nav-history-tab" 
+												data-bs-toggle="tab" 
+												data-bs-target="#nav-history" 
+												type="button" role="tab" 
+												aria-controls="nav-history" 
+												aria-selected="true">History</button>
+											  <button class="nav-link semi-bold" 
+												  id="nav-cover-tab" 
+												data-bs-toggle="tab" 
+												data-bs-target="#nav-cover" 
+												type="button" role="tab" 
+												aria-controls="nav-cover" 
+												aria-selected="false">Cover</button>
+										</div>
+									</nav>
+									<div class="tab-content" id="nav-tabContent">
+										<div class="tab-pane fade show active semi-bold" id="nav-history" role="tabpanel" aria-labelledby="nav-history-tab">
+											Demo text
+										</div>
+										<div class="tab-pane fade semi-bold" id="nav-cover" role="tabpanel" aria-labelledby="nav-cover-tab">
+											390 at 6/6/2021 &nbsp;&nbsp; 09:10:00 PM
+										</div>
+									</div>
+								</div>
+								<div class="send-message-checkbox">
+									<div class="form-check">
+										<input class="form-check-input" type="checkbox" value="" id="checkSendMessage">
+										<label class="form-check-label semi-bold" for="checkSendMessage">Send text message</label>
+									</div>
+								</div>
+								<div class="vr"></div>
+								<div class="form-bottom">
+									<div class="created-by">
+										<span class="created-by-header text-light semi-bold">Created by:</span>
+										&nbsp;
+										<span class="created-by-text semi-bold">390 at 6/6/2021 08:10:00 PM</span>
+									</div>
+									<div class="form-button-body">
+										<button type="button" class="chesed-form-button cancel-button" data-bs-dismiss="modal" aria-label="Close">Cancel</button>
+										<button type="button" class="chesed-form-button ok-button">Ok</button>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- send message modal -->
+<div class="modal fade" id="sendMessageModal" tabindex="-1" aria-labelledby="sendMessageModalLabel" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered">
+		<div class="modal-content">
+			<div class="modal-body p-0">
+				<div class="modal-body-items">
+					<div class="modal-body-right">
+						<div class="chesed-modal-header">
+							<span class="header-text bold">Send message</span>
+							<span class="close text-light" data-bs-dismiss="modal" aria-label="Close">
+								<i class="material-icons-outlined">close</i>
+							</span>
+						</div>
+						<div class="chesed-modal-body">
+							<form action="">
+								<div class="chesed-form-body mb-2 mt-2">
+									<div class="form-left">
+										<div class="form-floating mb-2">
+											<select class="form-select" id="floatingSelect" aria-label="Floating label select example">
+											  <option selected>526</option>
+											  <option value="1">422</option>
+											  <option value="2">321</option>
+											  <option value="3">742</option>
+											  <option value="4">975</option>
+											  <option value="5">559</option>
+											</select>
+											<label for="floatingSelect">Member</label>
+										</div>
+										<div class="form-floating mb-2">
+											<input type="email" class="form-control" id="floatingInput" placeholder="Email">
+											<label for="floatingInput">Email</label>
+										</div>
+										<div class="chesed-form-header mb-3 mt-3">
+											<span class="bold">Schedule time</span>
+										</div>
+										<div class="form-type mb-2">
+											<div class="form-type-left">
+												<div class="form-check">
+													<input class="form-check-input" type="checkbox" value="" id="checkNow">
+													<label class="form-check-label semi-bold" for="checkNow">Now</label>
+												</div>
+											</div>
+											<div class="form-type-right">
+												<div class="form-check">
+													<input class="form-check-input" type="checkbox" value="" id="checkLater">
+													<label class="form-check-label semi-bold" for="checkLater">Later</label>
+												</div>
+											</div>
+										</div>
+										<div class="timing mb-2">
+											<div class="timing-items">
+												<div class="form-floating">
+													<input type="date" class="form-control" id="floatingInput" placeholder="Date">
+													<label for="floatingInput">Date</label>
+												</div>
+											</div>
+											<div class="timing-items">
+												<div class="form-floating">
+													<input type="time" class="form-control" id="floatingInput" placeholder="Time">
+													<label for="floatingInput">Time</label>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="vl"></div>
+									<div class="form-right flex-grow-05">
+										<div class="form-floating mb-2">
+											<input type="text" class="form-control form-bg-offwhite" id="floatingInput" placeholder="Subject">
+											<label for="floatingInput">Subject</label>
+										</div>
+										<div class="form-middle-sec">
+											<div class="left-part">
+												<div class="form-floating mb-2">
+													<select class="form-select form-bg-offwhite" id="floatingSelect" aria-label="Floating label select example">
+													  <option selected>Add</option>
+													  <option value="1">Cancel</option>
+													  <option value="2">Accept</option>
+													</select>
+													<label for="floatingSelect">Derection to</label>
+												</div>
+											</div>
+											<div class="right-part">
+												<button type="button" class="plus-button">
+													+
+												</button>
+											</div>
+										</div>
+										<div class="form-floating mb-2">
+											<textarea
+												[(ngModel)]="role"
+												[maxlength]="maxChars" 
+												class="form-control form-bg-offwhite" 
+												placeholder="Message body" 
+												rows="2" maxlength="200" 
+												id="text" 
+												name="text" 
+												style="height: 116px">
+											</textarea>
+											<span class="pull-left label label-default" id="count_message">{{maxChars - role.length}} Charecter</span>
+											<label for="text">Message body</label>
+										</div>
+										<div class="chesed-file-upload mb-2">
+											<input type="file" id="file-upload" multiple />
+											<label for="file-upload">
+												<i class="material-icons-outlined">attachment</i>
+												Attachment
+											</label>
+											<div id="file-upload-filename"></div>
+										</div>
+									</div>
+								</div>
+								<div class="vr"></div>
+								<div class="form-bottom mb-2">
+									<div class="created-by">
+										<!-- <span class="created-by-header text-light semi-bold">Created by:</span>
+										&nbsp;
+										<span class="created-by-text semi-bold">390 at 6/6/2021 08:10:00 PM</span> -->
+									</div>
+									<div class="form-button-body">
+										<button type="button" class="chesed-form-button cancel-button" data-bs-dismiss="modal" aria-label="Close">Cancel</button>
+										<button type="button" class="chesed-form-button ok-button">Ok</button>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

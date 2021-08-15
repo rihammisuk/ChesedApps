@@ -1,0 +1,101 @@
+@media only screen and (min-width: 1730px) {
+    .main-content-body-items {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+@media only screen and (max-width: 1180px) {
+    .sub-header {
+        align-items: flex-start;
+    }
+    .sub-header .sub-header-left {
+        flex-direction: column-reverse;
+        align-items: flex-start;
+    }
+    .sub-header .sub-header-right {
+        flex-direction: column-reverse;
+        align-items: flex-end;
+    }
+    .sub-header .sub-header-right .filter-by {
+        margin-right: 5px;
+    }
+    .footer-options .footer-elements {
+        padding-bottom: 5px;
+    }
+}
+@media only screen and (max-width: 1080px) { 
+    .main-content-body-items {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media only screen and (max-width: 920px) {
+    .sub-header .sub-header-right .right-items {
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 10px;
+    }
+    .sub-header .sub-header-right .sort-by {
+        margin-right: 5px;
+    }
+    .main-content-body-items {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+@media only screen and (max-width: 767px) {
+    .sidebar {
+        width: 60px;
+    }
+    /* .sub-header {
+        left: 60px;
+        width: calc(100vw - 60px);
+    }
+    .main-content {
+        left: 60px;
+        width: calc(100vw - 60px);
+    } */
+    main {
+        left: 60px;
+        width: calc(100vw - 60px);
+    }
+    footer {
+        left: 60px;
+        width: calc(100vw - 60px);
+    }
+    .sidebar .sidebar-menu .sidebar-menu-item span {
+        display: none;
+    }
+    .sidebar .sidebar-menu a svg {
+        margin: 0 !important;
+        /* transition: all 500ms; */
+    }
+    .main-content header {
+        left: 0;
+    }
+
+    #sidebar-toggle:checked ~ .sidebar {
+        width: 212px;
+    }
+    #sidebar-toggle:checked ~ .sidebar .sidebar-menu .sidebar-menu-item span {
+        display: block;
+    }
+    #sidebar-toggle:checked ~ .sidebar .sidebar-menu a svg {
+        margin-right: 25px !important;
+        /* transition: all 500ms; */
+    }
+}
+@media only screen and (max-width: 600px) {
+    .sidebar-header .brand h3 {
+        font-size: 20px;
+    }
+    .sidebar-header .menu-ico {
+        font-size: 25px;
+    }
+    header .right-side .call-button {
+        padding: 7px;
+    }
+    header .right-side .call-button span {
+        display: none;
+    }
+    header .right-side .call-button i {
+        margin: 0;
+    }
+}

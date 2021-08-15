@@ -1,0 +1,134 @@
+[
+  {
+    "name": "Bina",
+    "services": "Support",
+    "speciality": "Brain Injury, Stroke",
+    "contact": "-",
+    "phone": "541-515-5376",
+    "email": "info@binausa.org",
+    "web": "https://www.binausa.org",
+    "address": "-",
+    "city": "New Rochelle"
+  },
+  {
+    "name": "Rofeh Cholim Cancer Society, RCCS",
+    "services": "Financial Support",
+    "speciality": "Cancer",
+    "contact": "-",
+    "phone": "623-986-1296",
+    "email": "rofehcholim@gmail.com",
+    "web": "https://www.rofehcholim.org",
+    "address": "-",
+    "city": "Monroe"
+  },
+  {
+    "name": "Zichron Shlome Refuah Fuad",
+    "services": "Financial Support",
+    "speciality": "Cancer",
+    "contact": "-",
+    "phone": "112-863-4459",
+    "email": "-",
+    "web": "https://www.zsrf.org",
+    "address": "-",
+    "city": "Bronx"
+  },
+  {
+    "name": "Sharsheret",
+    "services": "Support",
+    "speciality": "Cancer, Bone Marrow",
+    "contact": "-",
+    "phone": "556-768-0098",
+    "email": "sharsheret@gmail.com",
+    "web": "https://www.sharsheret.org",
+    "address": "-",
+    "city": "Monroe"
+  },
+  {
+    "name": "Focus on Life",
+    "services": "General Help, Hospitals Visits",
+    "speciality": "Cancer, Bone Marrow",
+    "contact": "-",
+    "phone": "565-255-7780",
+    "email": "info@focusinlife.org",
+    "web": "https://www.focusinlife.org",
+    "address": "150 New Providence Road",
+    "city": "Bronx"
+  },
+  {
+    "name": "Rabbi Zisha Ausah",
+    "services": "Medical Refferal",
+    "speciality": "Cancer, Mental Health, General Help",
+    "contact": "-",
+    "phone": "552-556-0098",
+    "email": "rabbizishaausah@gmail.com",
+    "web": "-",
+    "address": "-",
+    "city": "Monoe"
+  },
+  {
+    "name": "Bina",
+    "services": "Support",
+    "speciality": "Brain Injury, Stroke",
+    "contact": "-",
+    "phone": "541-515-5376",
+    "email": "info@binausa.org",
+    "web": "https://www.binausa.org",
+    "address": "-",
+    "city": "New Rochelle"
+  },
+  {
+    "name": "Rofeh Cholim Cancer Society, RCCS",
+    "services": "Financial Support",
+    "speciality": "Cancer",
+    "contact": "-",
+    "phone": "623-986-1296",
+    "email": "rofehcholim@gmail.com",
+    "web": "https://www.rofehcholim.org",
+    "address": "-",
+    "city": "Monroe"
+  },
+  {
+    "name": "Zichron Shlome Refuah Fuad",
+    "services": "Financial Support",
+    "speciality": "Cancer",
+    "contact": "-",
+    "phone": "112-863-4459",
+    "email": "-",
+    "web": "https://www.zsrf.org",
+    "address": "-",
+    "city": "Bronx"
+  },
+  {
+    "name": "Sharsheret",
+    "services": "Support",
+    "speciality": "Cancer, Bone Marrow",
+    "contact": "-",
+    "phone": "556-768-0098",
+    "email": "sharsheret@gmail.com",
+    "web": "https://www.sharsheret.org",
+    "address": "-",
+    "city": "Monroe"
+  },
+  {
+    "name": "Focus on Life",
+    "services": "General Help, Hospitals Visits",
+    "speciality": "Cancer, Bone Marrow",
+    "contact": "-",
+    "phone": "565-255-7780",
+    "email": "info@focusinlife.org",
+    "web": "https://www.focusinlife.org",
+    "address": "150 New Providence Road",
+    "city": "Bronx"
+  },
+  {
+    "name": "Rabbi Zisha Ausah",
+    "services": "Medical Refferal",
+    "speciality": "Cancer, Mental Health, General Help",
+    "contact": "-",
+    "phone": "552-556-0098",
+    "email": "rabbizishaausah@gmail.com",
+    "web": "-",
+    "address": "-",
+    "city": "Monoe"
+  }
+]

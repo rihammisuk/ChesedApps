@@ -1,0 +1,11 @@
+D:\Datavence Bangladesh\ChesedApp\ChesedApps\Chesed.Utilities\bin\Debug\net5.0\Chesed.Utilities.deps.json
+D:\Datavence Bangladesh\ChesedApp\ChesedApps\Chesed.Utilities\bin\Debug\net5.0\Chesed.Utilities.dll
+D:\Datavence Bangladesh\ChesedApp\ChesedApps\Chesed.Utilities\bin\Debug\net5.0\ref\Chesed.Utilities.dll
+D:\Datavence Bangladesh\ChesedApp\ChesedApps\Chesed.Utilities\bin\Debug\net5.0\Chesed.Utilities.pdb
+D:\Datavence Bangladesh\ChesedApp\ChesedApps\Chesed.Utilities\obj\Debug\net5.0\Chesed.Utilities.GeneratedMSBuildEditorConfig.editorconfig
+D:\Datavence Bangladesh\ChesedApp\ChesedApps\Chesed.Utilities\obj\Debug\net5.0\Chesed.Utilities.AssemblyInfoInputs.cache
+D:\Datavence Bangladesh\ChesedApp\ChesedApps\Chesed.Utilities\obj\Debug\net5.0\Chesed.Utilities.AssemblyInfo.cs
+D:\Datavence Bangladesh\ChesedApp\ChesedApps\Chesed.Utilities\obj\Debug\net5.0\Chesed.Utilities.csproj.CoreCompileInputs.cache
+D:\Datavence Bangladesh\ChesedApp\ChesedApps\Chesed.Utilities\obj\Debug\net5.0\Chesed.Utilities.dll
+D:\Datavence Bangladesh\ChesedApp\ChesedApps\Chesed.Utilities\obj\Debug\net5.0\ref\Chesed.Utilities.dll
+D:\Datavence Bangladesh\ChesedApp\ChesedApps\Chesed.Utilities\obj\Debug\net5.0\Chesed.Utilities.pdb

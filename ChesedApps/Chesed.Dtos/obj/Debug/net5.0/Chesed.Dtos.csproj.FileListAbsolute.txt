@@ -1,0 +1,11 @@
+D:\Datavence Bangladesh\ChesedApp\ChesedApps\Chesed.Dtos\bin\Debug\net5.0\Chesed.Dtos.deps.json
+D:\Datavence Bangladesh\ChesedApp\ChesedApps\Chesed.Dtos\bin\Debug\net5.0\Chesed.Dtos.dll
+D:\Datavence Bangladesh\ChesedApp\ChesedApps\Chesed.Dtos\bin\Debug\net5.0\ref\Chesed.Dtos.dll
+D:\Datavence Bangladesh\ChesedApp\ChesedApps\Chesed.Dtos\bin\Debug\net5.0\Chesed.Dtos.pdb
+D:\Datavence Bangladesh\ChesedApp\ChesedApps\Chesed.Dtos\obj\Debug\net5.0\Chesed.Dtos.GeneratedMSBuildEditorConfig.editorconfig
+D:\Datavence Bangladesh\ChesedApp\ChesedApps\Chesed.Dtos\obj\Debug\net5.0\Chesed.Dtos.AssemblyInfoInputs.cache
+D:\Datavence Bangladesh\ChesedApp\ChesedApps\Chesed.Dtos\obj\Debug\net5.0\Chesed.Dtos.AssemblyInfo.cs
+D:\Datavence Bangladesh\ChesedApp\ChesedApps\Chesed.Dtos\obj\Debug\net5.0\Chesed.Dtos.csproj.CoreCompileInputs.cache
+D:\Datavence Bangladesh\ChesedApp\ChesedApps\Chesed.Dtos\obj\Debug\net5.0\Chesed.Dtos.dll
+D:\Datavence Bangladesh\ChesedApp\ChesedApps\Chesed.Dtos\obj\Debug\net5.0\ref\Chesed.Dtos.dll
+D:\Datavence Bangladesh\ChesedApp\ChesedApps\Chesed.Dtos\obj\Debug\net5.0\Chesed.Dtos.pdb
